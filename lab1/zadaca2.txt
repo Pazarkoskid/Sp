@@ -1,0 +1,127 @@
+//Да се напише програма која за дадена сума на пари, ќе испечати со колку најмалку банкноти и монети може да се исплати. На влез се чита еден цел број. На излез се печатат 9 редови, по колку банкноти или монети од секој апоен ни се потребни за да ја исплатиме сумата. Пример 1583 денари, најдобро е да се исплати како:
+
+0*5000
+
+1*1000
+
+1*500
+
+0*100
+
+1*50
+
+3*10
+
+0*5
+
+1*2
+
+1*1
+
+#include <stdio.h>
+int main()
+{
+    int temp;
+    int d;
+    scanf("%d",&temp);
+    do
+    {
+        if(temp/5000>0)
+        {
+            d=temp/5000;
+            printf("%d*5000\n",d);
+            temp=temp-d*5000;
+        }
+        else
+            printf("0*5000\n");
+    }while(temp/5000>0);
+    do
+    {
+        if(temp/1000>0)
+        {
+            d=temp/1000;
+            printf("%d*1000\n",d);
+            temp=temp-d*1000;
+        }
+        else
+            printf("0*1000\n");
+    }while(temp/1000>0);
+    do
+    {
+        if(temp/500>0)
+        {
+            d=temp/500;
+            printf("%d*500\n",d);
+            temp=temp-d*500;
+        }
+        else
+            printf("0*500\n");
+    }while(temp/500>0);
+    do
+    {
+        if(temp/100>0)
+        {
+            d=temp/100;
+            printf("%d*100\n",d);
+            temp=temp-d*100;
+        }
+        else
+            printf("0*100\n");
+    }while(temp/100>0);
+    do
+    {
+        if(temp/50>0)
+        {
+            d=temp/50;
+            printf("%d*50\n",d);
+            temp=temp-d*50;
+        }
+        else 
+        printf("0*50\n");
+    } while(temp/50>0);
+    do
+    {   
+        if(temp/10>0)
+        {
+            d=temp/10;
+            printf("%d*10\n",d);
+            temp=temp-d*10;
+        }
+        else 
+        printf("0*10\n");
+    } while(temp/10>0);
+    do
+    {   
+        if(temp/5>0)
+        {
+            d=temp/5;
+            printf("%d*5\n",d);
+            temp=temp-d*5;
+        }
+        else 
+        printf("0*5\n");
+    } while(temp/5>0);
+    do
+    {   
+        if(temp/2>0)
+        {
+            d=temp/2;
+            printf("%d*2\n",d);
+            temp=temp-d*2;
+        }
+        else 
+        printf("0*2\n");
+    } while(temp/2>0);
+    do
+    {   
+        if(temp/1>0)
+        {
+            d=temp/1;
+            printf("%d*1\n",d);
+            temp=temp-1*5;
+        }
+        else 
+        printf("0*1\n");
+    } while(temp/1>0);
+return 0;    
+}
